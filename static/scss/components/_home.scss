@@ -1,0 +1,460 @@
+.hero-wrapper{
+  background-size: cover !important;
+  .title-section{
+    font-size: 30px;
+    color: $white;
+    font-family: $prSemiBold;
+    margin-bottom: 10px;
+  }
+  .subtitle-section{
+    color: $white;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+}
+.hero-list{}
+.hero-item{
+  box-sizing: border-box;
+  padding: 20px 30px;
+  background: $primary;
+  display: flex;
+  margin-bottom: 15px;
+  &:nth-of-type(2n){
+    flex-direction: row-reverse;
+  }
+  &:nth-of-type(2){
+    .hero-item__text{
+      padding-left: 30px;
+    }
+  }
+  &__info{
+    width: calc(100% - 170px);
+  }
+  &__title{
+    font-size: 24px;
+    font-family: $prSemiBold;
+    color: $white;
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-size: 14px;
+    font-family: $prRegular;
+    color: $white;
+    ul{
+      column-count: 2;
+    }
+    span{
+      font-family: $prSemiBold;
+      text-decoration: underline;
+    }
+  }
+  &__media{
+    position: relative;
+    width: 170px;
+    height: 90px;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+    }
+  }
+}
+.hero-form{
+  padding: 40px 20px;
+  background: $primary;
+  position: relative;
+  &:before, &:after{
+    position:  absolute;
+    content: '';
+    background: url("../images/general/block-pat.png") no-repeat;
+    width: 95px;
+    height: 97px;
+  }
+  &:before{
+    top: 0;
+    left: 0;
+  }
+  &:after{
+    bottom: 0;
+    right: 0;
+  }
+  &__title, form{
+    position: relative;
+    z-index: 2;
+    color: $white;
+  }
+  &__title{
+    font-size: 18px;
+    font-family: $prSemiBold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .label{
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .input{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .btn-default{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 16px 30px;
+  }
+}
+.advantage-wrapper{
+  background: $default;
+  padding: 20px 0;
+  .advantage-wrap{
+    margin: 0 -15px;
+  }
+  .advantage-item{
+    font-size: 14px;
+    line-height: 24px;
+    color: $white;
+    box-sizing: border-box;
+    padding: 0 15px;
+    position: relative;
+    &:before, &:after{
+      position: absolute;
+      content: '';
+      top: 0;
+    }
+    &:before{
+      right: 1px;
+      height: 9px;
+      width: 9px;
+      background: $primary;
+      z-index: 2;
+    }
+    &:after{
+      right: 5px;
+      width: 1px;
+      height: 100%;
+      background: $white;
+    }
+    &:last-of-type{
+      &:before, &:after{
+        display: none;
+      }
+    }
+  }
+}
+.more-info{
+  text-align: center;
+  .btn-arrow{
+    display: inline-block;
+  }
+}
+.service-price{
+  margin-bottom: 30px;
+  border: 1px solid $black;
+
+  &.active{
+    .service-price__title{
+      padding: 30px 30px 0;
+    }
+    .service-price__button{
+      &:after{
+        transform: rotate(180deg);
+      }
+    }
+    .service-price__wrap{
+      display: block;
+      .service-price__item{
+        margin-bottom: 10px;
+        .service-price__title{
+          padding: 0;
+          cursor: default;
+          -moz-user-select: auto;
+          -khtml-user-select: auto;
+          user-select: auto;
+        }
+      }
+    }
+  }
+  &__title{
+    font-family: $prSemiBold;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    padding: 30px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    span{
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+  &__wrap{
+    padding: 15px 30px;
+    display: none;
+  }
+  &__item{
+    justify-content: space-between;
+  }
+  &__button{
+    position: relative;
+    padding-right: 20px;
+    &:after{
+      position: absolute;
+      content: '';
+      top: 50%;
+      margin-top: -3px;
+      right: 0;
+      background: url("../images/general/ico-down-red.png");
+      width: 10px;
+      height: 6px;
+    }
+  }
+}
+
+.main-service{
+  .more-info{
+    .btn-arrow{
+      display: inline-flex;
+      img{
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.service-wrap{
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.service-item{
+  width: calc(33.333% - 30px);
+  margin: 0 auto 40px;
+  &__media{
+    margin-bottom: 15px;
+    height: 122px;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title{
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: $black;
+    font-family: $prRegular;
+  }
+  &__btn{
+    display: flex;
+    justify-content: space-between;
+    button{
+      width: 122px;
+      display: block;
+    }
+  }
+}
+.sidebar{
+  .title-sidebar{
+    font-size: 18px;
+    font-family: $prSemiBold;
+    color: $black;
+    margin-bottom: 25px;
+  }
+  .video-item{
+    margin-bottom: 30px;
+    &__media{
+      height: 143px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      position: relative;
+      &:before{
+        position: absolute;
+        content: '';
+        left: 25px;
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        background: rgba(44,44,44,.2);
+        opacity: 0;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all ease 200ms;
+      }
+      &:hover{
+        &:before{
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2;
+          opacity: 1;
+        }
+        img{
+          transform: scale(1.1);
+        }
+      }
+
+    }
+    &__title{
+      a{
+        font-size: 14px;
+        line-height: 16px;
+        color: $black;
+        margin-left: 10px;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .btn-red{
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 18px 30px 17px;
+    width: 100%;
+  }
+  .all-video{
+    margin-bottom: 25px;
+  }
+}
+.video-category{
+  position: relative;
+  span{
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $prSemiBold;
+    color: $white;
+    position: absolute;
+    width: 100%;
+    display: block;
+    padding: 30px;
+    z-index: 3;
+    text-align: center;
+  }
+  a{
+    overflow: hidden;
+    height: 322px;
+    img{
+      transition: all ease 200ms;
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.main-about{
+  position: relative;
+  background: $default;
+  color: $white;
+  .title-site{
+    color: $white;
+  }
+  .text-site{
+    p{
+      margin-bottom: 34px;
+    }
+    a{
+      font-size: 18px;
+      color: $white;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .about-social{
+    .title-site{
+      margin-bottom: 0;
+    }
+  }
+  .about-social__list{
+    margin-left: 20px;
+    li{
+      margin-right: 13px;
+    }
+    a{
+      width: 64px;
+      height: 64px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .col-md-6{
+    position: relative;
+  }
+  .about-reviews{
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 15px;
+    min-width: 670px;
+    padding: 36px;
+  }
+}
+.main-map{
+  padding: 110px 0 66px;
+  background-size: cover !important;
+  .main-location{
+    &__media{
+      img{
+        height: 100%;
+      }
+    }
+    &__info{
+      background: $white;
+      padding: 30px;
+    }
+    &__title{
+      font-size: 21px;
+      color: $primary;
+      font-family: $prSemiBold;
+      margin-bottom: 20px;
+    }
+    &__loc{
+      font-family: $prSemiBold;
+      font-size: 16px;
+      color: $black-100;
+      margin-bottom: 20px;
+    }
+    &__phone{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      span{
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 15px;
+      }
+    }
+    &__list{
+      width: 60%;
+      a{
+        font-size: 18px;
+        color: $primary;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    &__time{
+      width: 40%;
+      font-size: 11px;
+    }
+  }
+}

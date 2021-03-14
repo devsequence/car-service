@@ -1,0 +1,129 @@
+.sidebar-category{
+  margin-bottom: 30px;
+}
+.sidebar{
+  .btn-red{
+    margin-bottom: 15px;
+  }
+}
+.blog-item{
+  margin-bottom: 50px;
+  &__title{
+    margin-bottom: 10px;
+    a{
+      font-size: 24px;
+      font-family: $prSemiBold;
+      color: $black;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    ul{
+      display: flex;
+    }
+    li{
+      margin-right: 10px;
+      color: #5a5a5a;
+      font-size: 14px;
+      font-family: $prRegular;
+    }
+  }
+  &__comment{
+    align-items: center;
+    display: flex;
+  }
+  &__media{
+    margin-bottom: 15px;
+  }
+  &__des{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 24px;
+    color: $default-100;
+    width: calc(100% - 200px);
+  }
+  &__link{
+    width: 180px;
+    a{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.sidebar-category{
+  li{
+    margin-bottom: 10px;
+  }
+  a{
+    width: 100%;
+    text-align: center;
+  }
+}
+.blog-form{
+  padding: 20px;
+  background-size: cover !important;
+  &__title{
+    font-size: 18px;
+    color: $white;
+    margin-bottom: 25px;
+  }
+  .label,
+  .btn{
+    display: inline-block;
+    min-width: 300px;
+  }
+  .label{
+    margin-right: 20px;
+    input{
+      height: 42px;
+      width: 100%;
+    }
+  }
+  .modal-group{
+    color: $white;
+    margin: 10px 0;
+  }
+}
+.blog-post{
+  &__media{
+    margin-bottom: 20px;
+  }
+  &__media-img{
+    margin-right: 30px;
+  }
+
+}
+.post-wysiwyg{
+  p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    strong{
+      display: block;
+    }
+  }
+  iframe{
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    margin-bottom: 30px;
+  }
+  a{
+    color: $primary;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

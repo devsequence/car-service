@@ -38,15 +38,33 @@ $('.header-popup .popup-close').on('click', function (e) {
 // header nav
 
 
+$('.sub-nav')
+    .mouseenter(function() {
+        var $this = $(this);
+        $this.find('a').addClass('active');
+        $this.find('ul').addClass('active');
+        $('.header-overlay').addClass('active');
+    })
+    .mouseleave(function() {
+        var $this = $(this);
+        $this.find('a').removeClass('active');
+        $this.find('ul').removeClass('active');
+        $('.header-overlay').removeClass('active');
+    });
+
 // function for popup
 function popupOpen() {
     const $popupButton = $('.popup-btn');
     $popupButton.on('click', function (e) {
         const $this = $(this);
         const popupButtonData = $this.data('popup');
+        const popupText = $this.parent().prev().text();
         $('.popup').removeClass('active');
         $('body').addClass('is-scroll');
         $('div[data-popup = '+popupButtonData+']').addClass('active');
+
+        $('.popup-item-price .popup-subtitle').text(popupText);
+
     });
 }
 popupOpen();
@@ -65,26 +83,10 @@ $('.popup-overlay').on('click', function (e) {
 });
 // function for popup
 
-// accordion item
-$('.accordion-item').on('click', function (e) {
-    const $this = $(this);
-    $this.toggleClass('active');
-});
-// accordion item
-// guarantee item show more
-$('.guarantee-info__text').each(function (e) {
-    const $this = $(this);
-    const textLength = $this.text().length;
-    if(textLength > 350){
-        $this.addClass('show-more');
-        $this.next().removeClass('hidden')
-    }
-});
 
-$('.read-more').on('click', function () {
+$('.show-more').on('click', function () {
     const $this = $(this);
-    $this.find('span').toggleClass('hidden');
-    $this.prev().toggleClass('show-more')
+    $this.parent().toggleClass('active');
 });
 // guarantee item show more
 

@@ -1,0 +1,178 @@
+.header-top{
+  position: relative;
+  z-index: 100;
+  background: $black;
+  padding: 8px 0;
+  ul{
+    display: flex;
+    align-items: center;
+  }
+  li{
+    margin: 0 10px;
+    &:first-of-type{
+      margin-left: 0;
+    }
+  }
+  a{
+    font-size: 14px;
+    color: $white;
+    font-family: $prRegular;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .top-contact{
+    justify-content: flex-end;
+    button{
+      background: transparent;
+    }
+    li{
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+    a, button{
+      margin-left: 5px;
+      color: $white;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.header-center{
+  padding: 25px 0;
+  background: $white;
+  position: relative;
+  z-index: 100;
+  .header-location{
+    font-size: 13px;
+    a{
+      font-size: 12px;
+      text-decoration: underline;
+      color: $primary;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .header-time{
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  .header-social{
+    ul{
+      display: flex;
+      align-items: center;
+    }
+    li{
+      margin: 0 5px;
+      &:first-of-type{
+        margin-left: 0;
+      }
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+  }
+  .header-phone{
+    a{
+      font-size: 22px;
+      font-family: $prBold;
+      color: $black;
+    }
+  }
+}
+.header-overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba($black, .66);
+  opacity: 0;
+  &.active{
+    z-index: 99;
+    opacity: 1;
+  }
+}
+.header-bottom{
+  position: relative;
+  z-index: 100;
+  background: $primary;
+  .header-nav{
+    ul{
+      display: flex;
+    }
+    li{
+      margin: 0 22px;
+      &:first-of-type{
+        margin-left: 0;
+      }
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+    a{
+      font-size: 16px;
+      color: $white;
+      font-family: $prSemiBold;
+      padding: 25px 0;
+
+    }
+  }
+  .sub-nav{
+    position: relative;
+    a{
+      position: relative;
+      &:after{
+        position: absolute;
+        content: '';
+        right: -20px;
+        top: 50%;
+        margin-top: -3px;
+        background: url("../images/general/ico-down.png") no-repeat center;
+        width: 10px;
+        height: 6px;
+      }
+      &.active{
+        &:after{
+          transform: rotate(-180deg);
+          top: calc( 50% - 3px);
+        }
+      }
+    }
+    ul{
+      display: none;
+      background: #a30000;
+      min-width: 340px;
+      &.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+      a{
+        padding: 7px 10px;
+        width: 100%;
+        &:after{
+          display: none;
+        }
+        &:hover{
+          background: $white;
+          color: $primary;
+        }
+      }
+    }
+    li{
+      margin: 0;
+    }
+
+  }
+}
