@@ -850,6 +850,12 @@ body.is-scroll {
         margin-left: 0; }
       .header-mobile .header-social li:last-of-type {
         margin-right: 0; }
+    .header-mobile .header-social a {
+      max-width: 33px;
+      max-height: 33px; }
+      .header-mobile .header-social a img {
+        width: 100%;
+        height: 100%; }
   .header-mobile .header-phone {
     max-width: 250px;
     margin: 0 auto 50px; }

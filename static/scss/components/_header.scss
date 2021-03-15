@@ -319,6 +319,14 @@
         margin-right: 0;
       }
     }
+    a{
+      max-width: 33px;
+      max-height: 33px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .header-phone{
     max-width: 250px;
