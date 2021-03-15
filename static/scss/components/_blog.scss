@@ -4,6 +4,7 @@
 .sidebar{
   .btn-red{
     margin-bottom: 15px;
+    max-width: 300px;
   }
 }
 .blog-item{
@@ -68,6 +69,7 @@
   a{
     width: 100%;
     text-align: center;
+    max-width: 290px;
   }
 }
 .blog-form{
@@ -126,4 +128,10 @@
       text-decoration: none;
     }
   }
+}
+
+.comment-post__title{
+  font-size: 18px;
+  line-height: 30px;
+  font-family: $prSemiBold;
 }

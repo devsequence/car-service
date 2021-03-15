@@ -441,11 +441,13 @@ body{
 }
 .bread-crumbs{
   padding: 20px 0;
+  overflow-x: auto;
   li{
     color: $gray-100;
     font-size: 14px;
     font-family: $prRegular;
     margin-right: 35px;
+    white-space: nowrap;
   }
   a{
     color: $gray-100;
@@ -512,4 +514,23 @@ body{
     height: 100%;
     color: $white;
   }
+}
+.map-wrap{
+  max-width: 570px;
+  iframe{
+    width: 100%;
+  }
+}
+.page-contact{
+  padding-top: 20px;
+}
+.map-wrap__title{
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $prSemiBold;
+  margin-bottom: 20px;
+}
+.contact-page__list{
+  margin: 30px 0;
+  font-size: 16px;
 }
