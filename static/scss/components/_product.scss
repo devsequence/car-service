@@ -71,6 +71,24 @@
     }
   }
 }
+.product-descr{
+  font-family: $prRegular;
+  font-size: 16px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  img{
+    margin-right: 10px;
+  }
+}
+.product-subtitle{
+  font-size: 14px;
+  color: $white;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
 .product-video__btn{
   button{
     background: transparent;
@@ -113,6 +131,7 @@
     .label{
       margin-bottom: 10px;
       width: 100%;
+      display: block;
       .input{
         margin-top: 5px;
         width: 100%;
@@ -123,6 +142,7 @@
     }
     .rating-wrap{
       margin-top: 10px;
+      margin-bottom: 40px;
     }
   }
 }

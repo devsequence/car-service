@@ -2,19 +2,6 @@ $(window).on('load', function () {
     const $this = $(this);
     const $thisWidth = $this.width();
     if($thisWidth > 767){}else{
-        $(window).on('scroll', function() {
-            const $this = $(this);
-            const $thisHeader = $('.header');
-            const $thisPage = $('.page-content');
-            if ($this.scrollTop() > 1) {
-                $thisHeader.addClass('header-scroll');
-                $thisPage.addClass('page-scroll');
-            }else {
-                $thisHeader.removeClass('header-scroll');
-                $thisPage.removeClass('page-scroll');
-            }
-        });
-        // accordion price item
         $('.price-item').on('click', function (e) {
             const $this = $(this);
             $this.toggleClass('active');
@@ -39,8 +26,6 @@ $('.header-popup .popup-close').on('click', function (e) {
     $('body').removeClass('is-scroll');
 });
 // header nav
-
-
 $('.header-bottom .sub-nav')
     .mouseenter(function() {
         var $this = $(this);
@@ -63,15 +48,20 @@ $('.header-mobile .sub-nav__btn').on('click', function (e) {
 function popupOpen() {
     const $popupButton = $('.popup-btn');
     $popupButton.on('click', function (e) {
+        e.preventDefault();
         const $this = $(this);
         const popupButtonData = $this.data('popup');
+        const videoId = $this.find('.video-id').text();
         const popupText = $this.parent().prev().text();
         $('.popup').removeClass('active');
         $('body').addClass('is-scroll');
         $('div[data-popup = '+popupButtonData+']').addClass('active');
 
         $('.popup-item-price .popup-subtitle').text(popupText);
-
+        $(".video-popup iframe").remove();
+        $('<iframe frameborder="0" allowfullscreen></iframe>')
+            .attr("src", "http://www.youtube.com/embed/" + videoId)
+            .appendTo(".video-popup");
     });
 }
 popupOpen();
@@ -95,12 +85,13 @@ $('.show-more').on('click', function () {
     const $this = $(this);
     $this.parent().toggleClass('active');
 });
-// guarantee item show more
-
-// slick slider about page
-
 $('.btn-reviews').on('click', function (e) {
     $('html, body').animate({
         scrollTop: $(".reviews-form").offset().top - 100
+    }, 2000);
+});
+$('.product-descr').on('click', function (e) {
+    $('html, body').animate({
+        scrollTop: $(".about-product").offset().top - 100
     }, 2000);
 });

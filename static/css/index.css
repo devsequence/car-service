@@ -406,6 +406,12 @@ button {
   font-family: "ProximaNova Bold";
   margin-bottom: 30px; }
 
+.title-section {
+  font-size: 30px;
+  color: #000000;
+  font-family: "ProximaNova Bold";
+  margin-bottom: 34px; }
+
 .text-site {
   font-size: 14px;
   line-height: 24px;
@@ -526,6 +532,18 @@ body.is-scroll {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3); }
+
+.popup-video .popup-wrap {
+  max-width: 500px;
+  width: 500px; }
+
+.popup-video .video-popup {
+  width: 100%;
+  height: 310px; }
+
+.popup-video iframe {
+  width: 100%;
+  height: 100%; }
 
 .bread-crumbs {
   padding: 20px 0;
@@ -1396,6 +1414,23 @@ body.is-scroll {
       width: 63px;
       height: 54px; }
 
+.product-descr {
+  font-family: "Proxima Nova Regular";
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer; }
+  .product-descr img {
+    margin-right: 10px; }
+
+.product-subtitle {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: -20px;
+  margin-bottom: 30px; }
+
 .product-video__btn button {
   background: transparent;
   color: rgba(255, 255, 255, 0.6);
@@ -1428,7 +1463,8 @@ body.is-scroll {
 
 .product-question .comment-post .label {
   margin-bottom: 10px;
-  width: 100%; }
+  width: 100%;
+  display: block; }
   .product-question .comment-post .label .input {
     margin-top: 5px;
     width: 100%; }
@@ -1437,7 +1473,8 @@ body.is-scroll {
   margin-top: 5px; }
 
 .product-question .comment-post .rating-wrap {
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 40px; }
 
 .sidebar-category {
   margin-bottom: 30px; }
@@ -1617,7 +1654,8 @@ body.is-scroll {
 
 .rating > label {
   color: #90A0A3;
-  float: right; }
+  float: right;
+  margin: 0 5px 0 0; }
   .rating > label .icon {
     fill: transparent;
     stroke: #bd0000; }
@@ -1868,6 +1906,29 @@ body.is-scroll {
     padding: 10px 14px; } }
 
 @media screen and (max-width: 480px) {
+  .hero-wrapper .title-section {
+    font-size: 24px; }
+  .product-info .title-section {
+    font-size: 24px;
+    line-height: 34px;
+    max-width: 300px;
+    margin-bottom: 10px; }
+    .product-info .title-section:after {
+      width: 135px;
+      height: 72px;
+      background-size: cover;
+      right: 0px;
+      top: 45%; }
+  .product-title {
+    padding-bottom: 20px;
+    margin-bottom: 25px; }
+  .product-info__btn button {
+    padding: 11px 15px 11px 60px;
+    font-size: 18px; }
+    .product-info__btn button:before {
+      width: 50px;
+      height: 44px;
+      background-size: cover; }
   .hero-item {
     padding: 10px; }
   .sidebar-video {
@@ -1906,3 +1967,10 @@ body.is-scroll {
   .comment-post form .btn-default {
     width: 100%;
     max-width: 280px; } }
+
+@media screen and (max-width: 350px) {
+  .product-info__btn button {
+    padding: 11px 23px;
+    font-size: 18px; }
+    .product-info__btn button:before {
+      display: none; } }
