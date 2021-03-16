@@ -118,19 +118,25 @@
       display: flex;
     }
     li{
-      margin: 0 22px;
+      margin-right: 22px;
       &:first-of-type{
         margin-left: 0;
+        a{
+          padding-left: 0;
+        }
       }
       &:last-of-type{
         margin-right: 0;
+        a{
+          padding-right: 0;
+        }
       }
     }
     a{
       font-size: 16px;
       color: $white;
       font-family: $prSemiBold;
-      padding: 25px 0;
+      padding: 25px 22px 25px 0;
 
     }
   }
@@ -138,11 +144,10 @@
     position: relative;
     a{
       position: relative;
-
       &:after{
         position: absolute;
         content: '';
-        right: -20px;
+        right: 0;
         top: 50%;
         margin-top: -3px;
         background: url("../images/general/ico-down.png") no-repeat center;
@@ -168,7 +173,7 @@
         left: 0;
       }
       a{
-        padding: 7px 10px;
+        padding: 7px 10px !important;
         width: 100%;
         &:after{
           display: none;

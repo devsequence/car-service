@@ -228,6 +228,17 @@
       height: 6px;
     }
   }
+  .btn-black{
+    border-radius: 5px;
+    font-size: 16px;
+    color: $white;
+    padding: 11px 30px;
+    border: 1px solid transparent;
+    &:hover{
+      color: $default;
+      border-color: $default;
+    }
+  }
 }
 
 .main-service{
@@ -258,7 +269,7 @@
 }
 .service-item{
   width: calc(33.333% - 30px);
-  margin: 0 auto 40px;
+  margin: 0 15px 40px;
   &__media{
     margin-bottom: 15px;
     height: 122px;
@@ -352,6 +363,10 @@
   }
   .all-video{
     margin-bottom: 25px;
+    text-align: center;
+    a{
+      text-align: center;
+    }
   }
 }
 .video-category{
@@ -372,6 +387,7 @@
     overflow: hidden;
     height: 322px;
     img{
+      width: 100%;
       transition: all ease 200ms;
     }
     &:hover{

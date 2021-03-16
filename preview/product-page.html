@@ -292,39 +292,39 @@
                             <a href="service-page.html">Услуги</a>
                             <ul>
                                 <li>
-                                    <a href="service-page.html">Замена вариатора на автомат Nissan</a>
+                                    <a href="service.html">Замена вариатора на автомат Nissan</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Замена робота на автомат Toyota</a>
+                                    <a href="service.html">Замена робота на автомат Toyota</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Замена PowerShift на автомат Ford</a>
+                                    <a href="service.html">Замена PowerShift на автомат Ford</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Ремонт вариаторов Nissan</a>
+                                    <a href="service.html">Ремонт вариаторов Nissan</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Ремонт робота Toyota</a>
+                                    <a href="service.html">Ремонт робота Toyota</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Ремонт коробок PowerShift</a>
+                                    <a href="service.html">Ремонт коробок PowerShift</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Ремонт двигателей</a>
+                                    <a href="service.html">Ремонт двигателей</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="sub-nav">
-                            <a href="service-page.html">KIT комплеты для замены на АКПП</a>
+                            <a href="kat-service-page.html">KIT комплеты для замены на АКПП</a>
                             <ul>
                                 <li>
-                                    <a href="service-page.html">Замена вариатора на автомат Nissan</a>
+                                    <a href="kat-service.html">Замена вариатора на автомат Nissan</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Замена робота на автомат Toyota</a>
+                                    <a href="kat-service.html">Замена робота на автомат Toyota</a>
                                 </li>
                                 <li>
-                                    <a href="service-page.html">Замена PowerShift на автомат Ford</a>
+                                    <a href="kat-service.html">Замена PowerShift на автомат Ford</a>
                                 </li>
                             </ul>
                         </li>
@@ -375,8 +375,8 @@
 	<div class="page-content">
 		<section class="hero-wrapper" style="background: url('../static/images/general/hero-bg.jpg') no-repeat top center">
 			<div class="container">
-				<div class="bread-crumbs">
-					<ul>
+				<div class="bread-crumbs ">
+					<ul class="bread-crumbs__list d-flex align-items-center">
 						<li>
 							<a href="#">Главная</a>
 						</li>
@@ -410,12 +410,12 @@
 							</span>
 						</div>
 						<div class="product-info">
-							<div class="product-info__title">
+							<div class="title-section">
 								Узнайте подробности
 								прямо сейчас
 							</div>
 							<div class="product-info__btn">
-								<button type="button">Оставить заявку</button>
+								<button type="button" class="popup-btn" data-popup="call">Оставить заявку</button>
 							</div>
 							<div class="product-video__btn">
 								<button type="button">
@@ -482,6 +482,137 @@
 					<div class="col-md-12 col-lg-6">
 						<div class="about-product__media">
 							<iframe  src="https://www.youtube.com/embed/vnbDsc86zao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="product-form" style="background: url('../static/images/general/form-bg.jpg') no-repeat top center">
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-12 col-md-8">
+						<div class="blog-form" >
+							<div class="blog-form__title">
+								Оставьте заявку мы перезвоним:
+							</div>
+							<form action="#">
+								<label class="label">
+									<input type="tel" placeholder="+7 (937) 422-22-27" class="input">
+								</label>
+								<button type="submit" class="btn btn-default">Отправить</button>
+								<div class="modal-group">
+									<input class="input-checkbox" id="check" type="checkbox" name="check">
+									<label class="label-checkbox" for="check">
+										Согласие на обработку персональных данных
+										в целях исполнения запроса
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="product-question">
+			<div class="container">
+				<div class="title-site">
+					Не удобно звонить? Задай свой вопрос в комментариях:
+				</div>
+				<div class="product-question__form">
+					<form action="#" class="row comment-post">
+						<div class="col-md-3">
+							<label class="label">
+								Имя*
+								<input type="text" placeholder="Введите имя" class="input">
+							</label>
+							<label class="label">
+								Телефон <span>(будет скрыт от пользователей)</span>
+								<input type="tel" placeholder="Введите телефон" class="input">
+							</label>
+						</div>
+						<div class="col-md-9">
+							<label class="label-textarea">
+								Ваш комментарий, отзыв или вопрос:
+								<textarea name="text" placeholder=""></textarea>
+							</label>
+							<div class="rating-wrap">
+								<div class="rating">
+									<input type="radio" id="star5" class="input_rating" name="CommentModel[rating]" value="5">
+									<label class="rating-label" for="star5">
+										<svg class="icon">
+											<use xlink:href="#ico-star"></use>
+										</svg>
+									</label>
+									<input type="radio" id="star4" class="input_rating" name="CommentModel[rating]" value="4">
+									<label class="rating-label" for="star4">
+										<svg class="icon">
+											<use xlink:href="#ico-star"></use>
+										</svg>
+									</label>
+									<input type="radio" id="star3" class="input_rating" name="CommentModel[rating]" value="3">
+									<label class="rating-label" for="star3">
+										<svg class="icon">
+											<use xlink:href="#ico-star"></use>
+										</svg>
+									</label>
+									<input type="radio" id="star2" class="input_rating" name="CommentModel[rating]" value="2">
+									<label class="rating-label" for="star2">
+										<svg class="icon">
+											<use xlink:href="#ico-star"></use>
+										</svg>
+									</label>
+									<input type="radio" id="star1" class="input_rating" name="CommentModel[rating]" value="1">
+									<label class="rating-label" for="star1">
+										<svg class="icon">
+											<use xlink:href="#ico-star"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+							<button type="submit" class="btn-default">Отправить</button>
+						</div>
+					</form>
+				</div>
+				<div class="comment-answer">
+					<div class="answer-item">
+						<div class="answer-inner">
+							<div class="answer-item__title">
+								<div class="answer-item__name">
+											<span>
+												<img src="../static/images/general/answer-inner.png" alt="">
+											</span>
+									Алексей В.
+								</div>
+								<div class="answer-item__date">
+									13.02.2021
+								</div>
+								<div class="answer-item__btn">
+									<button type="button" class="popup-btn" data-popup="answer">Ответить</button>
+								</div>
+							</div>
+							<div class="answer-item__text">
+								Сколько стоит заманить вариатор на автомат. Кашкай 2.0 4 wd, 2012г ?
+							</div>
+						</div>
+						<div class="answer-child">
+							<div class="answer-item__title">
+								<div class="answer-item__name">
+											<span>
+												<img src="../static/images/general/answer-child.png" alt="">
+											</span>
+									Центр трансмиссионных решений
+								</div>
+								<div class="answer-item__date">
+									13.02.2021
+								</div>
+								<div class="answer-item__btn">
+									<button type="button" class="popup-btn" data-popup="answer">Ответить</button>
+								</div>
+							</div>
+							<div class="answer-item__text">
+
+								Добрый день, меняем только на двигателях 1.6
+							</div>
 						</div>
 					</div>
 				</div>
@@ -664,6 +795,24 @@
             <label class="label">
                 Введите телефон:
                 <input type="tel" placeholder="+7 (937) 422-22-27" class="input">
+            </label>
+            <button type="submit" class="btn btn-default">Отправить</button>
+        </form>
+    </div>
+    <div class="popup-overlay"></div>
+</div>
+<div class="popup popup-answer" data-popup="answer">
+    <div class="popup-wrap">
+        <div class="popup-close"></div>
+        <div class="popup-title">Ответить на комментарий</div>
+        <form action="#">
+            <label  class="label">
+                Введите Имя:
+                <input type="text" placeholder="Введите Имя"  class="input">
+            </label>
+            <label class="label-textarea">
+                Ваш ответ
+                <textarea></textarea>
             </label>
             <button type="submit" class="btn btn-default">Отправить</button>
         </form>

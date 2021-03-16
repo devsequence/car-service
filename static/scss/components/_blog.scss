@@ -42,6 +42,9 @@
   }
   &__media{
     margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
   }
   &__des{
     display: flex;
@@ -83,7 +86,7 @@
   .label,
   .btn{
     display: inline-block;
-    min-width: 300px;
+    min-width: 265px;
   }
   .label{
     margin-right: 20px;
@@ -134,4 +137,178 @@
   font-size: 18px;
   line-height: 30px;
   font-family: $prSemiBold;
+}
+.comment-post{
+  margin-bottom: 20px;
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .label{
+    color: #484848;
+    width: 255px;
+    span{
+      font-size: 11px;
+    }
+    .input{
+      display: block;
+      border: 1px solid $gray-200;
+      color: $gray-200;
+      text-align: left;
+    }
+  }
+  .label-textarea{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    textarea{
+      font-family: $prRegular;
+      display: block;
+      border: 1px solid $gray-200;
+      color: $gray-200;
+      height: 100px;
+      resize: none;
+      font-size: 16px;
+      border-radius: 5px;
+      outline: none;
+      padding: 10px;
+    }
+  }
+  .btn-default{
+    width: 300px;
+    display: block;
+    margin: 23px 0 0 auto;
+    text-transform: uppercase;
+    font-family: $prSemiBold;
+    background: #bd0000;
+    border-color: #bd0000;
+    &:hover{
+      background: transparent;
+      color: #bd0000;
+    }
+  }
+}
+.rating-label{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .icon{
+    width: 16px;
+    height: 16px;
+  }
+}
+.rating {
+  border: none;
+  float: left;
+  .rating{
+    width: auto;
+  }
+  span{
+    float: left;
+    margin: 1px 10px 0 0;
+  }
+}
+.clear{
+  clear: both;
+}
+.rating > label {
+  color: #90A0A3;
+  float: right;
+  .icon{
+    fill: transparent;
+    stroke: $primary;
+  }
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 2em;
+  display: inline-block;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > input:checked ~ label  .icon,
+.rating:not(:checked) > label:hover  .icon,
+.rating:not(:checked) > label:hover  ~  label .icon {
+  fill: $primary;
+}
+
+.rating > input:checked + label:hover .icon,
+.rating > input:checked ~ label:hover .icon,
+.rating > label:hover ~ input:checked ~ label .icon,
+.rating > input:checked ~ label:hover ~ label .icon {
+  fill: $primary;
+}
+.comment-answer{
+  margin-bottom: 40px;
+}
+.answer-item{
+  margin-bottom: 40px;
+  &__title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &__name{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #111111;
+    font-family: $prSemiBold;
+    margin-right: 10px;
+    span{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: $primary;
+      margin-right: 5px;
+    }
+  }
+  &__date{
+    color: #979797;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  &__btn{
+    margin-right: 10px;
+    button{
+      background: transparent;
+      color: #570000;
+      text-decoration: underline;
+    }
+  }
+  &__text{
+    position: relative;
+    font-size: 16px;
+    color: #1e1e1e;
+    padding-left: 25px;
+    &:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      background: url("../images/general/comment-bg.png") no-repeat top center;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+.answer-inner{}
+.answer-child{
+  padding-left: 90px;
+  margin-top: 25px;
 }

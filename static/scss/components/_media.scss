@@ -54,6 +54,25 @@
   .sidebar .btn-red{
     padding: 18px 15px 17px;
   }
+  .sidebar-category a{
+    padding: 11px 4px;
+    font-size: 14px;
+  }
+  .hero-info{
+    text-align: center;
+  }
+  .product-media{
+    max-width: 540px;
+    margin: 0 auto 20px;
+    img{
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .product-info{
+    max-width: 430px;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 1024px) {
   .advantage-wrapper{
@@ -162,7 +181,10 @@
     width: calc(50% - 30px);
     margin: 0 15px;
   }
-
+  .sidebar-category a{
+    padding: 11px 10px;
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 768px) {
   .header-top {
@@ -219,6 +241,18 @@
     margin:  0 auto 15px;
     min-width: 200px;
   }
+  .blog-item{
+    &__des{
+      flex-direction: column;
+    }
+    &__text{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .answer-child{
+    padding-left: 30px;
+  }
 }
 @media screen and (max-width: 580px) {
   .service-wrap{
@@ -257,6 +291,25 @@
     margin: 0 auto 15px;
     max-width: 250px;
   }
+  .comment-post{
+    form{
+      flex-direction: column;
+     .label{
+       width: 100%;
+       margin-bottom: 10px;
+     }
+      .input{
+        width: 100%;
+      }
+    }
+    .rating-wrap{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .btn-default{
+      margin: 20px 0 0 0;
+    }
+  }
 }
 @media screen and (max-width: 400px) {
   .main-map {
@@ -280,6 +333,14 @@
       }
       a, button{
         font-size: 12px;
+      }
+    }
+  }
+  .comment-post{
+    form{
+      .btn-default{
+        width: 100%;
+        max-width: 280px;
       }
     }
   }
