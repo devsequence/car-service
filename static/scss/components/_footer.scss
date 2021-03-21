@@ -21,12 +21,14 @@
   margin-bottom: 25px;
 }
 .footer-nav{
+  width: 50%;
+  display: inline-flex;
   ul{
     display: flex;
     flex-wrap: wrap;
   }
   li{
-    width: 50%;
+    width: 100%;
     margin-bottom: 5px;
     box-sizing: border-box;
     padding-right: 15px;

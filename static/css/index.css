@@ -1,28 +1,28 @@
 @font-face {
   font-family: 'Proxima Nova Light';
   src: url("../fonts/ProximaNova/ProximaNova-Light.eot");
-  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("../fonts/ProximaNova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype");
+  src: url("../fonts/ProximaNova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima Nova Regular';
   src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
-  src: local("Proxima Nova Extra Condensed Regular Italic"), local("ProximaNovaExCn-RegularIt"), url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Proxima Nova Semibold';
   src: url("../fonts/ProximaNova/ProximaNova-Semibold.eot");
-  src: local("Proxima Nova Condensed Semibold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova/ProximaNova-Semibold?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Semibold.ttf") format("truetype");
+  src: url("../fonts/ProximaNova/ProximaNova-Semibold?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ProximaNova Bold';
   src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
-  src: local("Proxima Nova Extra Condensed Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
 
@@ -633,7 +633,7 @@ body.is-scroll {
   position: relative;
   z-index: 100;
   background: #000000;
-  padding: 8px 0; }
+  padding: 8px 0 5px; }
   .header-top ul {
     display: flex;
     align-items: center; }
@@ -665,7 +665,7 @@ body.is-scroll {
         text-decoration: none; }
 
 .header-center {
-  padding: 25px 0;
+  padding: 25px 0 15px;
   background: #ffffff;
   position: relative;
   z-index: 100; }
@@ -733,7 +733,7 @@ body.is-scroll {
     font-size: 16px;
     color: #ffffff;
     font-family: "Proxima Nova Semibold";
-    padding: 25px 22px 25px 0; }
+    padding: 17px 22px 16px 0; }
   .header-bottom .sub-nav {
     position: relative; }
     .header-bottom .sub-nav a {
@@ -752,6 +752,7 @@ body.is-scroll {
         top: calc( 50% - 3px); }
     .header-bottom .sub-nav ul {
       display: none;
+      padding: 22px 0;
       background: #a30000;
       min-width: 340px; }
       .header-bottom .sub-nav ul.active {
@@ -761,7 +762,7 @@ body.is-scroll {
         top: 100%;
         left: 0; }
       .header-bottom .sub-nav ul a {
-        padding: 7px 10px !important;
+        padding: 15px 15px 14px 40px !important;
         width: 100%; }
         .header-bottom .sub-nav ul a:after {
           display: none; }
@@ -944,15 +945,17 @@ body.is-scroll {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 25px; }
 
-.footer-nav ul {
-  display: flex;
-  flex-wrap: wrap; }
-
-.footer-nav li {
+.footer-nav {
   width: 50%;
-  margin-bottom: 5px;
-  box-sizing: border-box;
-  padding-right: 15px; }
+  display: inline-flex; }
+  .footer-nav ul {
+    display: flex;
+    flex-wrap: wrap; }
+  .footer-nav li {
+    width: 100%;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    padding-right: 15px; }
 
 .footer-contact .footer-title {
   margin-bottom: 15px; }
@@ -968,7 +971,10 @@ body.is-scroll {
     margin-right: 0; }
 
 .hero-wrapper {
+  padding: 34px 0 41px;
   background-size: cover !important; }
+  .hero-wrapper .bread-crumbs {
+    margin-top: -20px; }
   .hero-wrapper .title-section {
     font-size: 30px;
     line-height: 34px;
@@ -978,17 +984,45 @@ body.is-scroll {
   .hero-wrapper .subtitle-section {
     color: #ffffff;
     font-size: 18px;
-    margin-bottom: 50px; }
+    margin-bottom: 42px; }
 
 .hero-wrap .subtitle-section {
-  margin-bottom: 30px; }
+  margin-bottom: 17px; }
 
 .hero-item {
   box-sizing: border-box;
   padding: 20px 30px;
   background: #bd0000;
   display: flex;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  max-width: 693px; }
+  .hero-item:nth-of-type(1) .hero-item__media {
+    top: 2px;
+    left: 13px; }
+  .hero-item:nth-of-type(1) .hero-item__text li:nth-of-type(3) {
+    max-width: 200px;
+    margin-left: 17px; }
+  .hero-item:nth-of-type(2) {
+    padding: 20px 30px 10px; }
+    .hero-item:nth-of-type(2) .hero-item__media {
+      top: 12px;
+      left: 4px; }
+    .hero-item:nth-of-type(2) .hero-item__title {
+      width: 110%;
+      margin-left: -30px; }
+    .hero-item:nth-of-type(2) .hero-item__text {
+      padding: 8px 0 0 70px;
+      line-height: 24px; }
+  .hero-item:nth-of-type(3) {
+    padding: 20px 30px 12px; }
+    .hero-item:nth-of-type(3) .hero-item__media {
+      top: 45px;
+      left: 26px; }
+    .hero-item:nth-of-type(3) .hero-item__title {
+      width: 120%; }
+    .hero-item:nth-of-type(3) .hero-item__text {
+      padding: 5px 0 0 0;
+      line-height: 24px; }
   .hero-item:nth-of-type(2n) {
     flex-direction: row-reverse; }
   .hero-item:nth-of-type(2) .hero-item__text {
@@ -996,12 +1030,12 @@ body.is-scroll {
   .hero-item:last-of-type {
     margin-bottom: 0; }
   .hero-item__info {
-    width: calc(100% - 110px); }
+    width: calc(100% - 0px); }
   .hero-item__title {
     font-size: 24px;
     font-family: "Proxima Nova Semibold";
     color: #ffffff;
-    margin-bottom: 10px; }
+    margin-bottom: 5px; }
   .hero-item__text {
     font-size: 14px;
     font-family: "Proxima Nova Regular";
@@ -1023,6 +1057,7 @@ body.is-scroll {
       transform: translate(-50%, -50%); }
 
 .hero-form {
+  margin-top: -21px;
   padding: 40px 20px;
   background: #bd0000;
   position: relative;
@@ -1050,7 +1085,9 @@ body.is-scroll {
     font-size: 18px;
     font-family: "Proxima Nova Semibold";
     text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding: 2px 10px 0;
+    line-height: 24px; }
   .hero-form .label {
     font-size: 16px;
     margin-bottom: 20px;
@@ -1064,10 +1101,12 @@ body.is-scroll {
     width: 100%;
     margin-bottom: 15px;
     padding: 16px 30px; }
+  .hero-form .modal-group .label-checkbox {
+    font-size: 12px; }
 
 .advantage-wrapper {
   background: #202020;
-  padding: 20px 0; }
+  padding: 20px 0 22px; }
   .advantage-wrapper .advantage-wrap {
     margin: 0 -15px; }
   .advantage-wrapper .advantage-item {
@@ -1082,18 +1121,38 @@ body.is-scroll {
       content: '';
       top: 0; }
     .advantage-wrapper .advantage-item:before {
+      top: 4px;
       right: 1px;
       height: 9px;
       width: 9px;
       background: #bd0000;
       z-index: 2; }
     .advantage-wrapper .advantage-item:after {
+      top: 7px;
       right: 5px;
       width: 1px;
       height: 100%;
       background: #ffffff; }
     .advantage-wrapper .advantage-item:last-of-type:before, .advantage-wrapper .advantage-item:last-of-type:after {
       display: none; }
+    .advantage-wrapper .advantage-item:nth-of-type(1) {
+      width: 285px;
+      min-width: 227px; }
+    .advantage-wrapper .advantage-item:nth-of-type(2) {
+      width: 217px;
+      padding: 0 32px;
+      min-width: 184px; }
+    .advantage-wrapper .advantage-item:nth-of-type(3) {
+      width: 248px;
+      padding: 0 35px;
+      min-width: 205px; }
+    .advantage-wrapper .advantage-item:nth-of-type(4) {
+      width: 170px;
+      padding: 0 25px 0 20px;
+      min-width: 153px; }
+    .advantage-wrapper .advantage-item:nth-of-type(6) {
+      width: 248px;
+      padding: 0 10px 0 40px; }
 
 .more-info {
   text-align: center; }
@@ -1101,10 +1160,11 @@ body.is-scroll {
     display: inline-block; }
 
 .service-price {
+  margin-top: 5px;
   margin-bottom: 30px;
   border: 1px solid #000000; }
   .service-price.active .service-price__title {
-    padding: 30px 30px 0; }
+    padding: 25px 30px 0 20px; }
   .service-price.active .service-price__button:after {
     transform: rotate(180deg); }
   .service-price.active .service-price__wrap {
@@ -1122,7 +1182,7 @@ body.is-scroll {
     font-size: 16px;
     line-height: 16px;
     cursor: pointer;
-    padding: 30px;
+    padding: 25px 30px 25px 20px;
     -moz-user-select: none;
     -khtml-user-select: none;
     user-select: none; }
@@ -1162,10 +1222,14 @@ body.is-scroll {
     display: inline-flex; }
     .main-service .more-info .btn-arrow img {
       margin-left: 20px; }
+  .main-service .title-site {
+    margin-bottom: 33px; }
 
 .service-wrap {
   flex-wrap: wrap;
   margin: 0 -15px; }
+  .service-wrap.align-items-start {
+    align-items: stretch !important; }
   .service-wrap.service-page .service-item {
     background: #f8f8f8; }
   .service-wrap.service-page .service-item__title {
@@ -1184,31 +1248,36 @@ body.is-scroll {
       width: 100%;
       object-fit: cover; }
   .service-item__title {
-    margin-bottom: 15px;
+    margin-bottom: 9px;
     font-size: 16px;
     color: #000000;
-    font-family: "Proxima Nova Regular"; }
+    font-family: "Proxima Nova Regular";
+    padding: 0 7px; }
   .service-item__btn {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 0 10px; }
     .service-item__btn button {
-      width: 110px;
-      display: block; }
+      width: 112px;
+      display: block;
+      padding: 8px 10px; }
 
 .sidebar .title-sidebar {
   font-size: 18px;
   font-family: "Proxima Nova Semibold";
   color: #000000;
-  margin-bottom: 25px; }
+  margin-bottom: 22px; }
 
 .sidebar .modal-group {
   margin-bottom: 10px; }
 
 .sidebar .video-item {
-  margin-bottom: 30px; }
+  margin-bottom: 20px;
+  background: #f8f8f8;
+  padding: 0 0 15px 0; }
   .sidebar .video-item__media {
     height: 143px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     overflow: hidden;
     position: relative; }
     .sidebar .video-item__media:before {
@@ -1234,14 +1303,16 @@ body.is-scroll {
       opacity: 1; }
     .sidebar .video-item__media:hover img {
       transform: scale(1.1); }
-  .sidebar .video-item__title a {
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    margin-left: 10px;
-    text-decoration: underline; }
-    .sidebar .video-item__title a:hover {
-      text-decoration: none; }
+  .sidebar .video-item__title {
+    padding: 0 12px; }
+    .sidebar .video-item__title a {
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+      margin-left: 11px;
+      text-decoration: underline; }
+      .sidebar .video-item__title a:hover {
+        text-decoration: none; }
 
 .sidebar .btn-red {
   border-radius: 30px;
@@ -1280,7 +1351,9 @@ body.is-scroll {
 .main-about {
   position: relative;
   background: #202020;
-  color: #ffffff; }
+  color: #ffffff;
+  z-index: 5;
+  padding: 40px 0 60px; }
   .main-about .title-site {
     color: #ffffff; }
   .main-about .text-site p {
@@ -1309,10 +1382,11 @@ body.is-scroll {
   .main-about .about-reviews {
     position: absolute;
     z-index: 2;
-    top: 100px;
-    left: 15px;
-    min-width: 670px;
-    padding: 36px; }
+    top: 130px;
+    right: 0;
+    min-width: 940px;
+    padding: 36px;
+    background-size: cover !important; }
 
 .main-map {
   padding: 110px 0 66px;

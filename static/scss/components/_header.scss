@@ -2,7 +2,7 @@
   position: relative;
   z-index: 100;
   background: $black;
-  padding: 8px 0;
+  padding: 8px 0 5px;
   ul{
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@
   }
 }
 .header-center{
-  padding: 25px 0;
+  padding: 25px 0 15px;
   background: $white;
   position: relative;
   z-index: 100;
@@ -136,7 +136,7 @@
       font-size: 16px;
       color: $white;
       font-family: $prSemiBold;
-      padding: 25px 22px 25px 0;
+      padding: 17px 22px 16px 0;
 
     }
   }
@@ -163,6 +163,7 @@
     }
     ul{
       display: none;
+      padding: 22px 0;
       background: #a30000;
       min-width: 340px;
       &.active{
@@ -173,7 +174,7 @@
         left: 0;
       }
       a{
-        padding: 7px 10px !important;
+        padding: 15px 15px 14px 40px !important;
         width: 100%;
         &:after{
           display: none;
