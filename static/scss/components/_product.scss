@@ -1,7 +1,8 @@
 .hero-wrapper{
   .bread-crumbs{
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: -13px;
     a{
       color: $white;
     }
@@ -14,14 +15,14 @@
 .product-title{
   display: flex;
   align-items: center;
-  padding-bottom: 40px;
+  padding: 22px 10px 40px 40px;
   margin-bottom: 30px;
   position: relative;
   &:after{
     position: absolute;
     content: '';
-    left: 0;
-    bottom: 0;
+    left: 40px;
+    bottom: -9px;
     height: 3px;
     width: 185px;
     background: $primary ;
@@ -30,20 +31,22 @@
     font-size: 18px;
     color: $white;
     padding-left: 20px;
-    line-height: 24px;
+    line-height: 28px;
   }
 }
 .product-info{
+  margin-bottom: 32px;
+  padding: 22px 0 0 40px;
   .title-section{
     line-height: 43px;
     max-width: 350px;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     &:after{
       position: absolute;
       content: '';
-      right: -80px;
-      top: 60%;
+      right: -86px;
+      top: 63%;
       background: url("../images/general/arrow-product.png") no-repeat;
       width: 210px;
       height: 112px;
@@ -57,9 +60,9 @@
     font-size: 22px;
     color: #131313;
     font-family: $prBold;
-    padding: 13px 20px 14px 70px;
+    padding: 13px 25px 14px 90px;
     border-radius: 8px;
-
+    box-shadow: 0 0 38px 20px rgba(2,41,78,0.4);
     &:before{
       position: absolute;
       content: '';
@@ -68,6 +71,9 @@
       background: url("../images/general/product-btn.png") no-repeat;
       width: 63px;
       height: 54px;
+    }
+    &:hover{
+      box-shadow: 0 0 38px 20px rgba(2,41,78,0.5);
     }
   }
 }
@@ -113,6 +119,11 @@
   }
 }
 .about-product{
+  padding: 35px 0 65px;
+  &__title{
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
   &__media{
     width: 100%;
     height: 100%;
@@ -124,7 +135,28 @@
   }
 }
 .product-form{
+  padding: 10px 0 0;
   background-size: cover !important;
+  .blog-form__title{
+    font-size: 24px;
+    margin-bottom: 27px;
+    padding: 4px 0 0 18px;
+  }
+  .blog-form{
+    form{
+      padding-left: 18px;
+      .label, .btn{
+        height: 53px;
+        min-width: 335px;
+      }
+      .input{
+        height: 53px;
+      }
+      .modal-group{
+        margin: 20px 0;
+      }
+    }
+  }
 }
 .product-question{
   .comment-post{
