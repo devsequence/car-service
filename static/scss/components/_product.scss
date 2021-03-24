@@ -85,6 +85,7 @@
   align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
+  padding-left: 40px;
   img{
     margin-right: 10px;
   }
@@ -92,8 +93,9 @@
 .product-subtitle{
   font-size: 14px;
   color: $white;
-  margin-top: -20px;
+  margin-top: -10px;
   margin-bottom: 30px;
+  padding-left: 40px;
 }
 .product-video__btn{
   button{

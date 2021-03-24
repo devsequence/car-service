@@ -74,7 +74,7 @@ img {
 
 section {
   position: relative;
-  padding: 40px 0;
+  padding: 20px 0;
   z-index: 1;
 }
 input, select{
@@ -130,11 +130,13 @@ button{
   text-align: center;
 }
 .label-checkbox{
+  text-align: left;
   position: relative;
-  padding-left: 25px;
+  padding-left: 30px;
   padding-top: 1px;
   cursor: pointer;
   font-size: 14px;
+  line-height: 12px;
   display: block;
   font-weight: 400;
   &:before, &:after{
@@ -477,7 +479,7 @@ body{
   }
 }
 .bread-crumbs{
-  padding: 20px 0;
+  padding: 20px 0 0;
   overflow-x: auto;
   li{
     color: $gray-100;

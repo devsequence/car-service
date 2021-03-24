@@ -48,7 +48,7 @@
     padding: 20px 30px 10px;
     .hero-item__media{
       top: 12px;
-      left: 4px;
+      left: -26px;
     }
     .hero-item__title{
       width: 110%;
@@ -541,7 +541,8 @@
     z-index: 2;
     top: 130px;
     right: 0;
-    min-width: 940px;
+    width: 50%;
+    max-width: 940px;
     padding: 36px;
     background-size: cover !important;
   }
