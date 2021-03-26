@@ -486,7 +486,6 @@ body{
     font-size: 14px;
     font-family: $prRegular;
     margin-right: 35px;
-    white-space: nowrap;
   }
   a{
     color: $gray-100;
@@ -506,6 +505,9 @@ body{
       text-decoration: underline;
     }
   }
+}
+.bread-crumbs__list{
+  flex-wrap: wrap;
 }
 .title-sidebar__line{
   font-size: 18px;

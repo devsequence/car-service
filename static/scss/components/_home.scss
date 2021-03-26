@@ -30,6 +30,11 @@
   display: flex;
   margin-bottom: 15px;
   max-width: 693px;
+  transition: all ease 300ms;
+  transform: scale(1);
+  &:hover{
+    transform: scale(1.02);
+  }
   &:nth-of-type(1){
     .hero-item__media{
       top: 2px;
@@ -235,6 +240,9 @@
       padding: 0 25px 0 20px;
       min-width: 153px;
     }
+    &:nth-of-type(5){
+      padding: 0 15px 0 30px;
+    }
     &:nth-of-type(6){
       width: 248px;
       padding: 0 10px 0 40px;
@@ -437,7 +445,7 @@
     }
     &__title{
       padding: 0 12px;
-      a{
+      span{
         font-size: 14px;
         line-height: 16px;
         color: $black;
@@ -545,7 +553,19 @@
     max-width: 940px;
     padding: 36px;
     background-size: cover !important;
+    .subtitle-site{
+      font-size: 18px;
+      margin: 10px 0 20px;
+      font-family: $prSemiBold;
+    }
+    ul{
+      display: flex;
+    }
+    li{
+      margin-right: 14px;
+    }
   }
+
 }
 .main-map{
   padding: 110px 0 66px;

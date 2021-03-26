@@ -140,6 +140,11 @@
   }
   .blog-post__media-img{
     margin: 0 auto 20px;
+    width: 100%;
+    max-width: 380px;
+    img{
+      width: 100%;
+    }
   }
   .sidebar .video-item__media{
     height: 143px;
@@ -148,6 +153,14 @@
     padding: 15px 0;
     .col-md-5, .col-md-4{
       display: none;
+    }
+    .header-number{
+      display: block;
+      width: auto;
+      margin: 0 auto;
+    }
+    .header-logo{
+      width: auto;
     }
   }
   .header-bottom{
@@ -223,6 +236,7 @@
   }
   .sidebar{
     padding-top: 30px;
+    text-align: center;
     .all-video{
       max-width: 250px;
       margin: 0 auto;
@@ -230,6 +244,11 @@
     }
     .video-category{
       display: none;
+    }
+    .modal-group {
+      max-width: 280px;
+      text-align: left;
+      margin: 0 auto 10px;
     }
   }
   .sidebar-video{
@@ -299,7 +318,22 @@
       }
     }
   }
+  .main-about{
+    .about-reviews{
+      text-align: center;
+      ul{
+        justify-content: center;
+      }
+      li{
+        margin: 0 7px;
+      }
+    }
+  }
+
   .header-top {
+    .top-nav{
+      margin: 0 -15px;
+    }
     ul{
       justify-content: center;
     }
@@ -308,6 +342,7 @@
       justify-content: center;
     }
   }
+
   .hero-item__text {
     ul {
       column-count: 1;
@@ -393,6 +428,25 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .main-about{
+    .about-reviews{
+      img{
+        width: 100%;
+      }
+      ul{
+        a{
+          max-width: 100px;
+          img{
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .header-center .header-number{
+    display: none;
+  }
   .product-form .blog-form form .label, .product-form .blog-form form .btn{
     min-width: 100%;
   }
@@ -461,6 +515,12 @@
       margin: 20px 0 0 0;
     }
   }
+  .blog-item__category{
+    flex-wrap: wrap;
+    ul{
+      flex-wrap: wrap;
+    }
+  }
 }
 @media screen and (max-width: 400px) {
   .main-map {
@@ -476,7 +536,7 @@
 @media screen and (max-width: 380px) {
   .header-top{
     li{
-      margin: 0 3px;
+      margin: 0 7px;
     }
     .top-contact{
       li{

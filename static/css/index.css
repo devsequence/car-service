@@ -556,8 +556,7 @@ body.is-scroll {
     color: #717171;
     font-size: 14px;
     font-family: "Proxima Nova Regular";
-    margin-right: 35px;
-    white-space: nowrap; }
+    margin-right: 35px; }
   .bread-crumbs a {
     color: #717171;
     font-size: 14px;
@@ -573,6 +572,9 @@ body.is-scroll {
       background: #717171; }
     .bread-crumbs a:hover {
       text-decoration: underline; }
+
+.bread-crumbs__list {
+  flex-wrap: wrap; }
 
 .title-sidebar__line {
   font-size: 18px;
@@ -857,7 +859,7 @@ body.is-scroll {
     margin: 0 auto 10px; }
   .header-mobile .header-location {
     font-size: 13px;
-    max-width: 250px;
+    max-width: 190px;
     margin: 0 auto 20px; }
     .header-mobile .header-location a {
       font-size: 12px;
@@ -867,7 +869,7 @@ body.is-scroll {
         text-decoration: none; }
   .header-mobile .header-mobile__info-time {
     font-size: 13px;
-    max-width: 250px;
+    max-width: 180px;
     display: flex;
     align-items: center;
     margin: 0 auto 20px; }
@@ -877,7 +879,7 @@ body.is-scroll {
     .header-mobile .header-mobile__info-time .header-time {
       max-width: 140px; }
   .header-mobile .header-social {
-    max-width: 250px;
+    max-width: 200px;
     margin: 0 auto 20px; }
     .header-mobile .header-social ul {
       display: flex;
@@ -895,7 +897,7 @@ body.is-scroll {
         width: 100%;
         height: 100%; }
   .header-mobile .header-phone {
-    max-width: 250px;
+    max-width: 150px;
     margin: 0 auto 50px; }
     .header-mobile .header-phone a {
       font-size: 18px;
@@ -999,7 +1001,11 @@ body.is-scroll {
   background: #bd0000;
   display: flex;
   margin-bottom: 15px;
-  max-width: 693px; }
+  max-width: 693px;
+  transition: all ease 300ms;
+  transform: scale(1); }
+  .hero-item:hover {
+    transform: scale(1.02); }
   .hero-item:nth-of-type(1) .hero-item__media {
     top: 2px;
     left: 13px; }
@@ -1154,6 +1160,8 @@ body.is-scroll {
       width: 170px;
       padding: 0 25px 0 20px;
       min-width: 153px; }
+    .advantage-wrapper .advantage-item:nth-of-type(5) {
+      padding: 0 15px 0 30px; }
     .advantage-wrapper .advantage-item:nth-of-type(6) {
       width: 248px;
       padding: 0 10px 0 40px; }
@@ -1309,13 +1317,13 @@ body.is-scroll {
       transform: scale(1.1); }
   .sidebar .video-item__title {
     padding: 0 12px; }
-    .sidebar .video-item__title a {
+    .sidebar .video-item__title span {
       font-size: 14px;
       line-height: 16px;
       color: #000000;
       margin-left: 11px;
       text-decoration: underline; }
-      .sidebar .video-item__title a:hover {
+      .sidebar .video-item__title span:hover {
         text-decoration: none; }
 
 .sidebar .btn-red {
@@ -1392,6 +1400,14 @@ body.is-scroll {
     max-width: 940px;
     padding: 36px;
     background-size: cover !important; }
+    .main-about .about-reviews .subtitle-site {
+      font-size: 18px;
+      margin: 10px 0 20px;
+      font-family: "Proxima Nova Semibold"; }
+    .main-about .about-reviews ul {
+      display: flex; }
+    .main-about .about-reviews li {
+      margin-right: 14px; }
 
 .main-map {
   padding: 110px 0 66px;
@@ -1935,13 +1951,23 @@ body.is-scroll {
   .blog-post__media {
     flex-direction: column; }
   .blog-post__media-img {
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 380px; }
+    .blog-post__media-img img {
+      width: 100%; }
   .sidebar .video-item__media {
     height: 143px; }
   .header-center {
     padding: 15px 0; }
     .header-center .col-md-5, .header-center .col-md-4 {
       display: none; }
+    .header-center .header-number {
+      display: block;
+      width: auto;
+      margin: 0 auto; }
+    .header-center .header-logo {
+      width: auto; }
   .header-bottom {
     display: none; }
   .header-mobile {
@@ -1980,13 +2006,18 @@ body.is-scroll {
   .service-price__title {
     padding: 15px; }
   .sidebar {
-    padding-top: 30px; }
+    padding-top: 30px;
+    text-align: center; }
     .sidebar .all-video {
       max-width: 250px;
       margin: 0 auto;
       text-align: center; }
     .sidebar .video-category {
       display: none; }
+    .sidebar .modal-group {
+      max-width: 280px;
+      text-align: left;
+      margin: 0 auto 10px; }
   .sidebar-video {
     display: flex;
     flex-wrap: wrap; }
@@ -2027,6 +2058,14 @@ body.is-scroll {
 @media screen and (max-width: 768px) {
   .product-form .blog-form form .modal-group {
     margin: 20px auto; }
+  .main-about .about-reviews {
+    text-align: center; }
+    .main-about .about-reviews ul {
+      justify-content: center; }
+    .main-about .about-reviews li {
+      margin: 0 7px; }
+  .header-top .top-nav {
+    margin: 0 -15px; }
   .header-top ul {
     justify-content: center; }
   .header-top .top-contact {
@@ -2085,6 +2124,15 @@ body.is-scroll {
     padding: 10px 14px; } }
 
 @media screen and (max-width: 480px) {
+  .main-about .about-reviews img {
+    width: 100%; }
+  .main-about .about-reviews ul a {
+    max-width: 100px; }
+    .main-about .about-reviews ul a img {
+      width: 100%;
+      object-fit: cover; }
+  .header-center .header-number {
+    display: none; }
   .product-form .blog-form form .label, .product-form .blog-form form .btn {
     min-width: 100%; }
   .product-form .blog-form__title {
@@ -2131,7 +2179,11 @@ body.is-scroll {
     width: 100%;
     margin-bottom: 10px; }
   .comment-post .btn-default {
-    margin: 20px 0 0 0; } }
+    margin: 20px 0 0 0; }
+  .blog-item__category {
+    flex-wrap: wrap; }
+    .blog-item__category ul {
+      flex-wrap: wrap; } }
 
 @media screen and (max-width: 400px) {
   .main-map .main-location__list {
@@ -2142,7 +2194,7 @@ body.is-scroll {
 
 @media screen and (max-width: 380px) {
   .header-top li {
-    margin: 0 3px; }
+    margin: 0 7px; }
   .header-top .top-contact li {
     margin: 0 4px; }
   .header-top .top-contact a, .header-top .top-contact button {
