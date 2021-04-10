@@ -1,45 +1,29 @@
 @font-face {
-  font-family: 'Proxima Nova Light';
-  src: url('../fonts/ProximaNova/ProximaNova-Light.eot');
+  font-family: 'Century Gothic';
+  src: url('../fonts/CenturyGothic/CenturyGothic-Bold.eot');
   src:
-  url('../fonts/ProximaNova/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ProximaNova/ProximaNova-Light.woff') format('woff'),
-  url('../fonts/ProximaNova/ProximaNova-Light.ttf') format('truetype');
-  font-weight: 300;
+  url('../fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff'),
+  url('../fonts/CenturyGothic/CenturyGothic-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
+$CenturyGothic: 'Century Gothic';
 @font-face {
-  font-family: 'Proxima Nova Regular';
-  src: url('../fonts/ProximaNova/ProximaNova-Regular.eot');
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT/FuturaPT-Bold.eot');
   src:
-  url('../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ProximaNova/ProximaNova-Regular.woff') format('woff'),
-  url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
-  font-weight: normal;
+          url('../fonts/FuturaPT/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/FuturaPT/FuturaPT-Bold.woff') format('woff'),
+          url('../fonts/FuturaPT/FuturaPT-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Proxima Nova Semibold';
-  src: url('../fonts/ProximaNova/ProximaNova-Semibold.eot');
-  src:
-  url('../fonts/ProximaNova/ProximaNova-Semibold?#iefix') format('embedded-opentype'),
-  url('../fonts/ProximaNova/ProximaNova-Semibold.woff') format('woff'),
-  url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+$FuturaPT: 'Futura PT';
+$monserant: 'Montserrat', sans-serif ;
+html,
+body {
+  font-family: $monserant;
+  font-weight: 400;
+  font-size: 14px;
 }
-@font-face {
-  font-family: 'ProximaNova Bold';
-  src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
-  src:
-  url('../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff'),
-  url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-$prBold: 'ProximaNova Bold';
-$prSemiBold: 'Proxima Nova Semibold';
-$prRegular: 'Proxima Nova Regular';
-$prLight: 'Proxima Nova Light';

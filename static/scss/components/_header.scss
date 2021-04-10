@@ -1,380 +1,129 @@
-.header-top{
-  position: relative;
-  z-index: 100;
-  background: $black;
-  padding: 8px 0 5px;
-  ul{
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0 auto;
+  &.scroll-nav{
+    background: #E6EBEE;
+  }
+  .container{
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px 6px;
   }
-  li{
-    margin: 0 10px;
-    &:first-of-type{
-      margin-left: 0;
+  &-logo{
+    margin: 0 auto 0 0;
+    max-width: 120px;
+    a, img{
+      width: 100%;
     }
   }
-  a{
-    font-size: 14px;
-    color: $white;
-    font-family: $prRegular;
-    &:hover{
-      text-decoration: underline;
-    }
-  }
-  .top-contact{
-    justify-content: flex-end;
-    button{
-      background: transparent;
-    }
-    li{
-      display: flex;
-      align-items: center;
-      margin: 0 10px;
-      &:last-of-type{
-        margin-right: 0;
-      }
-    }
-    a, button{
-      margin-left: 5px;
-      color: $white;
-      text-decoration: underline;
-      &:hover{
-        text-decoration: none;
-      }
-    }
-  }
-}
-.header-center{
-  padding: 25px 0 15px;
-  background: $white;
-  position: relative;
-  z-index: 100;
-  .header-location{
-    font-size: 13px;
-    a{
-      font-size: 12px;
-      text-decoration: underline;
-      color: $primary;
-      &:hover{
-        text-decoration: none;
-      }
-    }
-  }
-  .header-time{
-    margin-left: 10px;
-    font-size: 13px;
-  }
-  .header-social{
+  &-social{
     ul{
       display: flex;
-      align-items: center;
     }
     li{
-      margin: 0 5px;
-      &:first-of-type{
-        margin-left: 0;
-      }
-      &:last-of-type{
-        margin-right: 0;
-      }
-    }
-    a{
-      max-width: 33px;
-      max-height: 33px;
-      img{
-        width: 100%;
-        height: 100%;
-      }
+      margin-right: 10px;
     }
   }
-  .header-phone{
+  &-phone{
+    position: relative;
+    ul{
+      display: none;
+    }
+  }
+  &-phone__btn{
+    margin-right: 10px;
+    .icon{
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &-nav__button{
+    .icon-cross{
+      width: 16px;
+      height: 16px;
+      opacity: 0;
+    }
+  }
+  &-nav{
+    background: $white;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    z-index: 11;
+    padding: 25px 15px;
+    transition: all ease 150ms;
+    box-sizing: border-box;
+    &.is-hidden{
+      left: -150%;
+    }
+    ul{}
+    li{
+      margin-bottom: 15px;
+    }
     a{
-      font-size: 22px;
-      font-family: $prBold;
-      color: $black;
+      font-family: $monserant;
+      font-weight: 600;
+      color: $default;
+      font-size: 14px;
+      width: 100%;
     }
   }
 }
 .header-overlay{
-  width: 100%;
-  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
-  background: rgba($black, .66);
-  opacity: 0;
-  &.active{
-    z-index: 99;
-    opacity: 1;
-  }
-}
-.header-bottom{
-  position: relative;
-  z-index: 100;
-  background: $primary;
-  .header-nav{
-    ul{
-      display: flex;
-    }
-    li{
-      margin-right: 22px;
-      &:first-of-type{
-        margin-left: 0;
-        a{
-          padding-left: 0;
-        }
-      }
-      &:last-of-type{
-        margin-right: 0;
-        a{
-          padding-right: 0;
-        }
-      }
-    }
-    a{
-      font-size: 16px;
-      color: $white;
-      font-family: $prSemiBold;
-      padding: 17px 22px 16px 0;
-
-    }
-  }
-  .sub-nav{
-    position: relative;
-    a{
-      position: relative;
-      &:after{
-        position: absolute;
-        content: '';
-        right: 0;
-        top: 50%;
-        margin-top: -3px;
-        background: url("../images/general/ico-down.png") no-repeat center;
-        width: 10px;
-        height: 6px;
-      }
-      &.active{
-        &:after{
-          transform: rotate(-180deg);
-          top: calc( 50% - 3px);
-        }
-      }
-    }
-    ul{
-      display: none;
-      padding: 22px 0;
-      background: #a30000;
-      min-width: 340px;
-      &.active{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-      a{
-        padding: 15px 15px 14px 40px !important;
-        width: 100%;
-        &:after{
-          display: none;
-        }
-        &:hover{
-          background: $white;
-          color: $primary;
-        }
-      }
-    }
-    li{
-      margin: 0;
-    }
-
-  }
-}
-.header-center{
-  position: relative;
-  &.is-open{
-    z-index: 101;
-    padding: 0;
-    height: 0;
-    .logo{
-      display: none;
-    }
-  }
-}
-.btn-header{
-  display: none;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  margin-top: -12px;
-  width: 24px;
-  height: 24px;
-  box-sizing: border-box;
-  border-top: 2px solid $primary;
-  border-bottom: 2px solid $primary;
-  cursor: pointer;
-  transition: all ease 200ms;
-  span{
-    position: absolute;
-    top: 50%;
-    margin-top: -1px;
-    height: 2px;
-    width: 100%;
-    background: $primary;
-    transition: all ease 100ms;
-    &:before, &:after{
-      position: absolute;
-      content: '';
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 2px;
-      background: $primary;
-      transition: all ease 300ms;
-    }
-  }
-}
-
-.header-mobile{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: -200%;
   width: 100%;
   height: 100%;
-  z-index: 101;
-  background: $white;
-  transition: all ease 300ms;
-  padding: 20px 0;
-  &.is-open{
-    left: 0;
+  background: rgba($black, .7);
+  z-index: -10;
+  opacity: 0;
+  visibility: hidden;
+  &.is-hidden{
+    visibility: visible;
+    z-index: 10;
+    opacity: 1;
   }
-  .logo{
-    text-align: center;
-  }
-  .btn-close{
+  .icon-cross{
     position: absolute;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    top: 15px;
     right: 15px;
-    &:before, &:after{
-      position: absolute;
-      content: '';
-      left: 0;
-      top: 50%;
-      width: 100%;
-      height: 2px;
-      margin-top: -1px;
-      background: $primary;
-    }
-    &:before{
-      transform: rotate(45deg);
-    }
-    &:after{
-      transform: rotate(135deg);
-    }
-  }
-  .btn-secondary{
-    display: block;
-    max-width: 220px;
-    margin: 0 auto 10px;
-  }
-  .header-location{
-    font-size: 13px;
-    max-width: 190px;
-    margin: 0 auto 20px;
-    a{
-      font-size: 12px;
-      text-decoration: underline;
-      color: $primary;
-      &:hover{
-        text-decoration: none;
-      }
-    }
-  }
-  .header-mobile__info-time{
-    font-size: 13px;
-    max-width: 180px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto 20px;
-    img{
-      display: inline-block;
-      margin-right: 15px;
-    }
-    .header-time{
-      max-width: 140px;
-    }
-  }
-  .header-social{
-    max-width: 200px;
-    margin: 0 auto 20px;
-    ul{
-      display: flex;
-      align-items: center;
-    }
-    li{
-      margin: 0 5px;
-      &:first-of-type{
-        margin-left: 0;
-      }
-      &:last-of-type{
-        margin-right: 0;
-      }
-    }
-    a{
-      max-width: 33px;
-      max-height: 33px;
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  .header-phone{
-    max-width: 150px;
-    margin: 0 auto 50px;
-    a{
-      font-size: 18px;
-      font-family: $prBold;
-      color: $black;
-    }
+    top: 20px;
+    cursor: pointer;
+    fill: $white;
+    width: 16px;
+    height: 16px;
   }
 }
-.header-mobile__nav{
-  max-width: 250px;
-  margin: 10px auto;
-  a{
-    font-size: 14px;
-    color: $default;
+.header-phone{
+  .icon{
+    position: relative;
+    top: 2px;
   }
-  .sub-nav{
-    margin-bottom: 10px;
-    span{
-      font-family: $prSemiBold;
-      display: inline-block;
-      margin-bottom: 10px;
-      position: relative;
-      &:after{
-        position: absolute;
-        content: '';
-        right: -20px;
-        top: 50%;
-        margin-top: -3px;
-        background: url("../images/general/ico-down-red.png") no-repeat center;
-        width: 10px;
-        height: 6px;
-      }
+  ul{
+    &.is-open{
+      display: block;
+      position: absolute;
+      width: 150px;
+      left: -100px;
+      top: 32px;
+      background: #E6EBEE;
+      padding: 10px;
+      box-sizing: border-box;
     }
-    ul{
-      display: none;
-    }
-    li{
-      margin-bottom: 5px;
+    a{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: $default;
+      font-family: $FuturaPT;
     }
   }
-
 }

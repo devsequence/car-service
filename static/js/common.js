@@ -1,97 +1,100 @@
-$(window).on('load', function () {
-    const $this = $(this);
-    const $thisWidth = $this.width();
-    if($thisWidth > 767){}else{
-        $('.price-item').on('click', function (e) {
-            const $this = $(this);
-            $this.toggleClass('active');
-        });
+AOS.init({disable: 'mobile'});
+$(window).on('scroll', function() {
+    var $this = $(this),
+        $header = $('.header');
+    var sectionStep = $('#step').offset().top - 100;
+    if ($this.scrollTop() >= sectionStep) {
+        $('.tab-item__media').addClass('media-animation');
+    }
+    if ($this.scrollTop() > 1) {
+        $header.addClass('scroll-nav');
+    }
+    else{
+        $header.removeClass('scroll-nav');
     }
 });
-// header nav
-$('.btn-header').on('click', function (e) {
+$('.header-logo a, .footer-logo a').on('click', function (e) {
     e.preventDefault();
-    $('.header-mobile').addClass('is-open');
-    $('body').addClass('is-scroll');
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+    return false;
 });
-$('.btn-close').on('click', function (e) {
-    e.preventDefault();
-    $('.header-mobile').removeClass('is-open');
-    $('body').removeClass('is-scroll');
+$(document).mouseup(function (e){
+    var div = $('.header-phone');
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        $('.header-phone ul').removeClass('is-open');
+    }
 });
-$('.header-popup .popup-close').on('click', function (e) {
-    e.preventDefault();
-    $('.header-btn').removeClass('is-open');
-    $('.header-popup').removeClass('is-open');
-    $('body').removeClass('is-scroll');
-});
-// header nav
-$('.header-bottom .sub-nav')
-    .mouseenter(function() {
-        var $this = $(this);
-        $this.find('a').addClass('active');
-        $this.find('ul').addClass('active');
-        $('.header-overlay').addClass('active');
-    })
-    .mouseleave(function() {
-        var $this = $(this);
-        $this.find('a').removeClass('active');
-        $this.find('ul').removeClass('active');
-        $('.header-overlay').removeClass('active');
-    });
-$('.header-mobile .sub-nav__btn').on('click', function (e) {
-    var $this = $(this);
-    $this.next().slideToggle();
-});
-
-// function for popup
-function popupOpen() {
-    const $popupButton = $('.popup-btn');
-    $popupButton.on('click', function (e) {
+$(function() {
+    var headerHeight = $('header').outerHeight(); // Target your header navigation here
+    $('.header-nav a').click(function(e) {
+        var targetHref   = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(targetHref).offset().top - headerHeight // Add it to the calculation here
+        }, 1000);
+        $('.header-nav__button').find('.icon').toggleClass('hidden');
+        $('.header-nav, .header-overlay').toggleClass('is-hidden');
+        $('body').toggleClass('scroll');
         e.preventDefault();
-        const $this = $(this);
-        const popupButtonData = $this.data('popup');
-        const videoId = $this.find('.video-id').text();
-        const popupText = $this.parent().prev().text();
+    });
+});
+$('.header-nav__button').on('click', function () {
+   var $this = $(this);
+    $this.find('.icon').toggleClass('hidden');
+    $('.header-nav, .header-overlay').toggleClass('is-hidden');
+    $('body').toggleClass('scroll');
+});
+$('.footer-nav').on('click', function () {
+    $('.header-nav__button').find('.icon').toggleClass('hidden');
+    $('.header-nav, .header-overlay').toggleClass('is-hidden');
+    $('body').toggleClass('scroll');
+});
+$('.header-overlay').on('click', function () {
+    $('.header-nav__button').find('.icon').toggleClass('hidden');
+    $('.header-nav, .header-overlay').toggleClass('is-hidden');
+    $('body').toggleClass('scroll');
+});
+$('.header-phone__btn').on('click', function () {
+    var $this = $(this);
+    $this.next().toggleClass('is-open');
+});
+function popupOpen() {
+    var $popupButton = $('.btn-popup');
+    $popupButton.on('click', function (e) {
+        var $this = $(this);
+        var popupButtonData = $this.data('popup');
         $('.popup').removeClass('active');
-        $('body').addClass('is-scroll');
         $('div[data-popup = '+popupButtonData+']').addClass('active');
-
-        $('.popup-item-price .popup-subtitle').text(popupText);
-        $(".video-popup iframe").remove();
-        $('<iframe frameborder="0" allowfullscreen></iframe>')
-            .attr("src", "http://www.youtube.com/embed/" + videoId)
-            .appendTo(".video-popup");
+        $('body').addClass('scroll');
     });
 }
 popupOpen();
-
 $('.popup-close').on('click', function (e) {
-    const $this = $(this);
+    var $this = $(this);
     $this.parent().parent().removeClass('active');
     $('.popup-overlay').removeClass('active');
-    $('body').removeClass('is-scroll');
+    $('body').removeClass('scroll');
 });
 $('.popup-overlay').on('click', function (e) {
-    const $this = $(this);
+    var $this = $(this);
     $this.removeClass('active');
     $('.popup').removeClass('active');
-    $('body').removeClass('is-scroll');
+    $('body').removeClass('scroll');
 });
-// function for popup
-
-
-$('.show-more').on('click', function () {
-    const $this = $(this);
-    $this.parent().toggleClass('active');
-});
-$('.btn-reviews').on('click', function (e) {
-    $('html, body').animate({
-        scrollTop: $(".reviews-form").offset().top - 100
-    }, 2000);
-});
-$('.product-descr').on('click', function (e) {
-    $('html, body').animate({
-        scrollTop: $(".about-product").offset().top - 100
-    }, 2000);
-});
+function tabsInner(){
+    var tabItemNav = $('.tab-nav a');
+    var tabItem = $('.tab-item' );
+    tabItemNav.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this),
+            tabItemId = $this.attr('href');
+        tabItemNav.removeClass('active');
+        $this.addClass('active');
+        tabItem.removeClass('active');
+        $('.tab-item__media').removeClass('media-animation');
+        $(tabItemId).addClass('active').find('.tab-item__media').addClass('media-animation');
+    });
+}
+tabsInner();

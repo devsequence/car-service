@@ -1,56 +1,49 @@
 .footer{
-  padding: 40px 0 35px;
-  background: $default;
-  color: $white;
-  a{
-    font-size: 16px;
-    color: $white;
-    font-family: $prLight;
-    text-decoration: underline;
-    &:hover{
-      text-decoration: none;
-    }
-  }
-}
-.footer-logo{
-  margin-bottom: 20px;
-}
-.footer-info__text{
-  font-family: $prLight;
-  color: rgba($white, .5);
-  margin-bottom: 25px;
-}
-.footer-nav{
-  width: 50%;
-  display: inline-flex;
-  ul{
+  background: $black;
+  .container{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-  }
-  li{
-    width: 100%;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-    padding-right: 15px;
-  }
-}
-.footer-contact{
-  .footer-title{
-    margin-bottom: 15px;
-  }
-  ul{
-    margin-bottom: 20px;
-  }
-  .d-flex{
-    li{
-      margin: 0 5px 5px;
-      &:first-of-type{
-        margin-left: 0;
-      }
-      &:last-of-type{
-        margin-right: 0;
-      }
+    padding: 10px 15px 6px;
+    .icon{
+      fill: $white;
     }
   }
-
+  &-logo{
+    margin: 0 auto 0 0;
+    max-width: 120px;
+    a, img{
+      width: 100%;
+    }
+    img{
+      filter: invert(1);
+    }
+  }
+  &-social{
+    ul{
+      display: flex;
+    }
+    li{
+      margin-right: 10px;
+    }
+  }
+  &-phone{
+    position: relative;
+    ul{
+      display: none;
+    }
+  }
+  &-phone__btn{
+    margin-right: 10px;
+    .icon{
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &-nav__button{
+    .icon-cross{
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
